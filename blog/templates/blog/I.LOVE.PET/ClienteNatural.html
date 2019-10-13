@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <title>Registrar Cliente | I love pet</title>
+    <link rel="icon" href="Imagenes/heart-icon_34407.ico"> 
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container l-nav-container">
+            <div class="logo">
+                <img src="imagenes/Logo-I-love-Pet.png" width="100%" opacity=".1">
+            </div>
+            <span class="icon-menu">
+                <i class="fas fa-align-justify"></i>
+            </span>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="Galery.html">Galeria</a></li>
+                    <a class="abrir-modal" id="abrirM">Iniciar Sesión</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="clientenatural">
+        <form action="RegistroMascota.html" method="POST" class="form-formulario">
+
+            <h3 class="datosclientes">Datos Clientes:</h3>
+
+            <div class="container I-form-container">
+
+                <Input type="text" name="run" required maxlength="12" placeholder="Run" class="input-48" id="run">
+
+                <input type="email" name="email" required maxlength="50" placeholder="Email" class="input-48" id="email">
+
+                <input type="text" name="nombres" required maxlength="50" placeholder="Nombre Completo"
+                    class="input-100">
+                <input type="date" name="fechanacimiento" aria-placeholder="FecNac" value="Fecha Nacimiento"
+                    max="2100-01-01" required class="input-48" style="color: darkgray">
+                <Select id="Nacionalidad" name="nacionalidad" class="input-48" style="height:41px">
+                    <option selected="Nacionalidad">--Seleccione su Nacionalidad </option>
+                </Select>
+                <input type="tel" name="telefono" required minlength="6" maxlength="9" placeholder="Teléfono"
+                    class="input-48">
+                <input type="tel" name="celular" required minlength="6" maxlength="9" placeholder="Celular"
+                    class="input-48">
+                <input type="tel" name="TelOficina" placeholder="Tel Oficina" class="input-48">
+                <input type="text" name="profesion" required class="input-100" placeholder="Profesión">
+                <input type="Password" name="contraseña" required class="input-48" placeholder="Contraseña">
+                <input type="Password" name="contraseña2" required class="input-48" placeholder="Repita Contraseña">
+                <button>Continuar</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+
+        <div class="container">
+            <div class="container-total">
+
+                <div class="columna1">
+                    <h2>Más información de la clínica</h2>
+                    <p>Todo pensado para que, tanto usted como su mascota se sientan cómodos y
+                        bien atendidos como sea posible..</p>
+
+                </div>
+
+                <div class="columna2">
+                    <h2>Redes Sociales</h2>
+
+                    <div class="row">
+                        <a class="iconS">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <label>Síguenos en Facebook </label>
+                    </div>
+
+                    <div class="row">
+                        <a class="iconS">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <label>Síguenos en Instagram </label>
+                    </div>
+
+                    <div class="row">
+                        <a class="iconS">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <label>Síguenos en Twitter</label>
+                    </div>
+                </div>
+
+                <div class="columna3">
+                    <h2>Contacto</h2>
+
+                    <div class="rowC">
+                        <a class="iconC">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                        <label href="">Sucursales</label>
+                    </div>
+
+                    <div class="rowC">
+                        <a class="iconC">
+                            <i class="far fa-envelope-open"></i>
+                        </a>
+                        <label>contacto@ilovepet.guau</label>
+                    </div>
+
+                    <div class="rowC">
+                        <a class="iconC">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <label>666666666</label>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="container-copy">
+            <div class="copyright">
+                <p>© Copyright 2019 · BD-Thos</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay">
+        <div class="modal" id="modal">
+            <a href="" id="cerar-modal" class="cerrar-modal"><i class="fas fa-times"></i></a>
+            <h3 class="iniciar">INICIAR SESIÓN</h3>
+            <form action="ClienteJuridico.html">
+                <div class="container-input">
+                    <input type="email" placeholder="Correo Electrónico">
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" class="btn-iniciar" value="Iniciar Sesión">
+                <div class="registrar">
+                    <a href="ClienteJuridico.html">Crea una cuenta</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/bf88a16619.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script>
+        $(".slideshow").slick({
+            dots: true,
+            fade: true,
+            autoplay: true
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
